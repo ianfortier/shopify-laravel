@@ -5,7 +5,7 @@ namespace App\Shopify;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class ProductListing extends Model 
+class ProductListing extends Model
 {
 
     protected $table = 'shopify_product_listings';
@@ -14,5 +14,11 @@ class ProductListing extends Model
     use SoftDeletes;
 
     protected $dates = ['deleted_at'];
+
+    protected $casts = [
+        'images' => 'array',
+        'options' => 'array',
+        'variants' => 'array',
+    ];
 
 }

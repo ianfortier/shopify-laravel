@@ -5,7 +5,7 @@ namespace App\Shopify;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class FulfillmentService extends Model 
+class FulfillmentService extends Model
 {
 
     protected $table = 'shopify_fulfillment_services';
@@ -14,5 +14,6 @@ class FulfillmentService extends Model
     use SoftDeletes;
 
     protected $dates = ['deleted_at'];
+    public $fillable = ['fulfillment_service_id'];
 
 }

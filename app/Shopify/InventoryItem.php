@@ -5,7 +5,7 @@ namespace App\Shopify;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class InventoryItem extends Model 
+class InventoryItem extends Model
 {
 
     protected $table = 'shopify_inventory_items';
@@ -15,4 +15,5 @@ class InventoryItem extends Model
 
     protected $dates = ['deleted_at'];
 
+    protected $fillable = ['inventory_item_id'];
 }

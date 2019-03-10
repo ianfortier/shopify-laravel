@@ -5,7 +5,7 @@ namespace App\Shopify;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class CustomCollection extends Model 
+class CustomCollection extends Model
 {
 
     protected $table = 'shopify_custom_collections';
@@ -15,4 +15,8 @@ class CustomCollection extends Model
 
     protected $dates = ['deleted_at'];
 
+    protected $casts = [
+        'metafield' => 'array',
+        'image' => 'array',
+    ];
 }

@@ -5,7 +5,7 @@ namespace App\Shopify;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class ProductImage extends Model 
+class ProductImage extends Model
 {
 
     protected $table = 'shopify_products_images';
@@ -13,6 +13,10 @@ class ProductImage extends Model
 
     use SoftDeletes;
 
+    protected $fillable = ['image_id'];
     protected $dates = ['deleted_at'];
+    protected $casts = [
+        'variant_ids' => 'array',
+    ];
 
 }

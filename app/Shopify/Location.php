@@ -5,7 +5,7 @@ namespace App\Shopify;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Location extends Model 
+class Location extends Model
 {
 
     protected $table = 'shopify_locations';
@@ -14,5 +14,6 @@ class Location extends Model
     use SoftDeletes;
 
     protected $dates = ['deleted_at'];
+    protected $fillable = ['location_id'];
 
 }
